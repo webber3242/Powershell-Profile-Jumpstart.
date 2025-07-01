@@ -205,22 +205,22 @@ Install-Module -Name PSReadLine -Scope CurrentUser -Force -AllowPrerelease
 function qq {
     Write-Host "Custom Commands:" -ForegroundColor Cyan
     Write-Host "ll            : List dir (like 'dir')" -NoNewline; Write-Host "          grep          : Search in files" -ForegroundColor Gray
-    Write-Host "which         : Find command path" -NoNewline; Write-Host "        cat/touch     : Show/create file" -ForegroundColor Gray
-    Write-Host "..            : Up 1 dir" -NoNewline; Write-Host "                ...           : Up 2 dirs" -ForegroundColor Gray
-    Write-Host "....          : Up 3 dirs" -NoNewline; Write-Host "              mkd/mkdir     : Make dir" -ForegroundColor Gray
-    Write-Host "del <path>    : Delete (with warning)" -NoNewline; Write-Host "        rm <path>     : Delete (no warning)" -ForegroundColor Gray
-    Write-Host "cp/mv         : Copy/move files" -NoNewline; Write-Host "        rmdir <path>  : Remove directory" -ForegroundColor Gray
-    Write-Host "nf <name>     : Create file" -NoNewline; Write-Host "             cls           : Clear screen" -ForegroundColor Gray
-    Write-Host "ports         : Show open ports" -NoNewline; Write-Host "         processes     : Top 20 CPU processes" -ForegroundColor Gray
-    Write-Host "diskspace/df  : Disk usage" -NoNewline; Write-Host "           myip/localip  : Show IP addresses" -ForegroundColor Gray
-    Write-Host "du/size       : Directory size" -NoNewline; Write-Host "         h <pattern>   : Search history" -ForegroundColor Gray
-    Write-Host "prof          : Edit profile" -NoNewline; Write-Host "            rl            : Reload profile" -ForegroundColor Gray
-    Write-Host "profile       : Open profile folder" -NoNewline; Write-Host "     kill <name/id>: Stop process" -ForegroundColor Gray
-    Write-Host "find <pattern>: Search files/folders" -NoNewline; Write-Host "     flushdns      : Flush DNS cache" -ForegroundColor Gray
-    Write-Host "check-svchost : Verify svchost" -NoNewline; Write-Host "         history       : Command history" -ForegroundColor Gray
-    Write-Host "z/zi/aj       : lf navigation" -NoNewline; Write-Host "         mkcd <dir>    : Make and cd to dir" -ForegroundColor Gray
-    Write-Host "Edit-Profile  : Edit in VS Code" -NoNewline; Write-Host "         Reload-Profile: Reload profile" -ForegroundColor Gray
-    Write-Host "np/npp/notepad: Open Notepad++" -NoNewline; Write-Host "         " -ForegroundColor Gray
+    Write-Host "which         : Find command path" -NoNewline; Write-Host "              cat/touch     : Show/create file" -ForegroundColor Gray
+    Write-Host "..            : Up 1 dir" -NoNewline; Write-Host "                       ...           : Up 2 dirs" -ForegroundColor Gray
+    Write-Host "....          : Up 3 dirs" -NoNewline; Write-Host "                       mkd/mkdir     : Make dir" -ForegroundColor Gray
+    Write-Host "del <path>    : Delete (with warning)" -NoNewline; Write-Host "           rm <path>     : Delete (no warning)" -ForegroundColor Gray
+    Write-Host "cp/mv         : Copy/move files" -NoNewline; Write-Host "                 rmdir <path>  : Remove directory" -ForegroundColor Gray
+    Write-Host "nf <name>     : Create file" -NoNewline; Write-Host "                     cls           : Clear screen" -ForegroundColor Gray
+    Write-Host "ports         : Show open ports" -NoNewline; Write-Host "                 processes     : Top 20 CPU processes" -ForegroundColor Gray
+    Write-Host "diskspace/df  : Disk usage" -NoNewline; Write-Host "                      myip/localip  : Show IP addresses" -ForegroundColor Gray
+    Write-Host "du/size       : Directory size" -NoNewline; Write-Host "                  h <pattern>   : Search history" -ForegroundColor Gray
+    Write-Host "prof          : Edit profile" -NoNewline; Write-Host "                    rl            : Reload profile" -ForegroundColor Gray
+    Write-Host "profile       : Open profile folder" -NoNewline; Write-Host "             kill <name/id>: Stop process" -ForegroundColor Gray
+    Write-Host "find <pattern>: Search files/folders" -NoNewline; Write-Host "            flushdns      : Flush DNS cache" -ForegroundColor Gray
+    Write-Host "check-svchost : Verify svchost" -NoNewline; Write-Host "                  history       : Command history" -ForegroundColor Gray
+    Write-Host "z/zi/aj       : lf navigation" -NoNewline; Write-Host "                   mkcd <dir>    : Make and cd to dir" -ForegroundColor Gray
+    Write-Host "Edit-Profile  : Edit in VS Code" -NoNewline; Write-Host "                 Reload-Profile: Reload profile" -ForegroundColor Gray
+    Write-Host "np/npp/notepad: Open Notepad++" -NoNewline; Write-Host "                  " -ForegroundColor Gray
 }
 
 # 13. Startup Message
@@ -254,10 +254,6 @@ function Show-SystemInfo {
 }
 Show-SystemInfo
 
-# 15. Optional Fortune Cookie
-if (Get-Command fortune -ErrorAction SilentlyContinue) {
-    fortune | Write-Host -ForegroundColor Cyan
-}
 
 # 16. Always show commands on startup/reload
 qq
